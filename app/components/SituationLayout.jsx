@@ -1,10 +1,10 @@
 // @ts-nocheck
 "use client";
 import Link from "next/link";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
-import FadeIn from "../../components/FadeIn";
-import ContactForm from "../../components/ContactForm";
+import Nav from "./Nav";
+import Footer from "./Footer";
+import FadeIn from "./FadeIn";
+import ContactForm from "./ContactForm";
 
 const ALL_SITUATIONS = [
   { icon: "🏠", title: "Inherited a Property", slug: "inherited-property" },
