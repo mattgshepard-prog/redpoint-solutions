@@ -544,8 +544,8 @@ function buildPDFHTML(contact, results, answers) {
   ${(results.nextSteps && results.nextSteps.length) ? `<h2>Next Steps</h2>${stepsHTML}` : ""}
 
   <div class="footer">
-    <p><strong>Redpoint Solutions</strong> &bull; A Redpoint Consulting Company</p>
-    <p>(720) 764-9112 &bull; redpointsolutions.ai</p>
+    <p><strong>Redpoint Home Solutions</strong> &bull; A Redpoint Consulting Company</p>
+    <p>(720) 764-9112 &bull; redpointhomesolutions.com</p>
     <p>Denver Metro, Colorado</p>
   </div>
 </body></html>`;

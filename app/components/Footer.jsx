@@ -44,7 +44,7 @@ export default function Footer() {
               fontWeight: 500,
             }}
           >
-            Redpoint Solutions
+            Redpoint Home Solutions
           </span>
         </Link>
         <div style={{ fontSize: "0.78rem", color: "rgba(232,226,214,0.35)" }}>

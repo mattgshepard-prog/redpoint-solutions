@@ -65,7 +65,7 @@ export default function Nav() {
               letterSpacing: "-0.01em",
             }}
           >
-            Redpoint Solutions
+            Redpoint Home Solutions
           </span>
         </Link>
 

@@ -2,7 +2,7 @@
 import SituationLayout from "../../components/SituationLayout";
 
 export const metadata = {
-  title: "Selling Your House During Divorce in Colorado | Redpoint Solutions",
+  title: "Selling Your House During Divorce in Colorado | Redpoint Home Solutions",
   description: "Going through a divorce and need to sell the house? We explain Colorado's equitable distribution laws, your options, and how to sell fast with zero drama.",
 };
 

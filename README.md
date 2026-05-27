@@ -1,4 +1,4 @@
-# Redpoint Solutions — redpointsolutions.ai
+# Redpoint Home Solutions — redpointhomesolutions.com
 
 Distressed seller resource site for Redpoint Consulting's wholesale acquisition side. Denver metro focus.
 
@@ -32,7 +32,7 @@ npm run dev
    - `RESEND_API_KEY` (optional)
    - `FROM_EMAIL` (optional)
    - `NOTIFICATION_EMAIL` (optional)
-4. Point `redpointsolutions.ai` to Vercel in GoDaddy DNS
+4. Point `redpointhomesolutions.com` to Vercel in GoDaddy DNS
 
 ## Phase 2 (TODO)
 - [ ] AI Situation Assessment survey widget (Gemini-powered)
@@ -43,5 +43,5 @@ npm run dev
 - [ ] Google Analytics / conversion tracking
 
 ## Entity
-Redpoint Solutions is a division of Redpoint Consulting (M G Enterprises LLC).
+Redpoint Home Solutions is a division of Redpoint Consulting (M G Enterprises LLC).
 Backed by Onsight Construction LLC (licensed GC).

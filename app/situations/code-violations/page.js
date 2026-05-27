@@ -2,7 +2,7 @@
 import SituationLayout from "../../components/SituationLayout";
 
 export const metadata = {
-  title: "House Has Code Violations or Needs Major Repairs? | Redpoint Solutions",
+  title: "House Has Code Violations or Needs Major Repairs? | Redpoint Home Solutions",
   description: "Code violations and major repairs can make your Colorado home feel unsellable. We're licensed contractors who buy houses in any condition. Here are your real options.",
 };
 

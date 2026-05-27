@@ -15,7 +15,7 @@ export async function POST(request) {
     const maxScore = questions.length * 4;
     const scorePercent = Math.round((totalScore / maxScore) * 100);
 
-    const prompt = `You are a senior real estate advisor specializing in helping distressed homeowners in the Denver metro area of Colorado. You work for Redpoint Solutions, which is backed by Onsight Construction (a licensed general contractor with 15+ years experience).
+    const prompt = `You are a senior real estate advisor specializing in helping distressed homeowners in the Denver metro area of Colorado. You work for Redpoint Home Solutions, which is backed by Onsight Construction (a licensed general contractor with 15+ years experience).
 
 A homeowner named ${contact.name} just completed our Property Situation Assessment. Their complexity score is ${scorePercent}% (${totalScore}/${maxScore} — higher means more complex/urgent).
 

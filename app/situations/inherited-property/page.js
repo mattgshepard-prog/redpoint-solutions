@@ -2,7 +2,7 @@
 import SituationLayout from "../../components/SituationLayout";
 
 export const metadata = {
-  title: "Inherited a House in Colorado? Here Are Your Real Options | Redpoint Solutions",
+  title: "Inherited a House in Colorado? Here Are Your Real Options | Redpoint Home Solutions",
   description: "You inherited a property and don't know what to do. We explain probate, your options for selling, and how to handle shared ownership — all specific to Colorado law.",
 };
 

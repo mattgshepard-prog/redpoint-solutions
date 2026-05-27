@@ -2,7 +2,7 @@
 import SituationLayout from "../../components/SituationLayout";
 
 export const metadata = {
-  title: "Facing Tax Liens or Back Taxes on Your Colorado Home? | Redpoint Solutions",
+  title: "Facing Tax Liens or Back Taxes on Your Colorado Home? | Redpoint Home Solutions",
   description: "Tax liens and back taxes in Colorado can lead to a tax sale. We explain the timeline, your rights, and your options to protect your equity before it's too late.",
 };
 

@@ -12,8 +12,8 @@ export async function POST(request) {
     const { Resend } = await import("resend");
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    const fromEmail = process.env.FROM_EMAIL || "leads@redpointsolutions.ai";
-    const notifyEmail = process.env.NOTIFICATION_EMAIL || "matt@redpointsolutions.ai";
+    const fromEmail = process.env.FROM_EMAIL || "leads@redpointhomesolutions.com";
+    const notifyEmail = process.env.NOTIFICATION_EMAIL || "matt@redpointhomesolutions.com";
 
     const scorePercent = answers
       ? Math.round((answers.reduce((s, a) => s + a.weight, 0) / (answers.length * 4)) * 100)
@@ -49,7 +49,7 @@ export async function POST(request) {
         resend.emails.send({
           from: fromEmail,
           to: contact.email,
-          subject: `Your Property Situation Assessment — Redpoint Solutions`,
+          subject: `Your Property Situation Assessment — Redpoint Home Solutions`,
           html: `
             <div style="font-family:'Segoe UI',sans-serif;max-width:600px;margin:0 auto;padding:20px;">
               <div style="border-bottom:2px solid #C4956A;padding-bottom:16px;margin-bottom:24px;">
@@ -82,7 +82,7 @@ export async function POST(request) {
               </div>
 
               <div style="margin-top:24px;text-align:center;font-size:0.78rem;color:#aaa;">
-                <p>Redpoint Solutions &bull; A Redpoint Consulting Company<br/>Denver Metro, Colorado</p>
+                <p>Redpoint Home Solutions &bull; A Redpoint Consulting Company<br/>Denver Metro, Colorado</p>
               </div>
             </div>
           `,

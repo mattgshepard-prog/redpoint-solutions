@@ -2,7 +2,7 @@
 import SituationLayout from "../../components/SituationLayout";
 
 export const metadata = {
-  title: "Need to Sell Your Colorado Home Fast? Job Relocation & Life Changes | Redpoint Solutions",
+  title: "Need to Sell Your Colorado Home Fast? Job Relocation & Life Changes | Redpoint Home Solutions",
   description: "Job transfer, family emergency, or major life change? When you need to sell your Denver metro home fast, we close on your timeline — as quickly as 7 days.",
 };
 

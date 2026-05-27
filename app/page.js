@@ -187,7 +187,7 @@ export default function HomePage() {
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: 16, fontSize: "0.95rem", lineHeight: 1.75, color: "rgba(232,226,214,0.7)", fontWeight: 300 }}>
                 <p style={{ margin: 0 }}>Most "we buy houses" companies have never swung a hammer. They guess at repair costs, lowball you, then flip the contract to someone else. We're different.</p>
-                <p style={{ margin: 0 }}>Redpoint Solutions is backed by Onsight Construction — a licensed general contractor with 15+ years in Colorado. When we look at your house, we know exactly what it needs because we've built and renovated hundreds of homes.</p>
+                <p style={{ margin: 0 }}>Redpoint Home Solutions is backed by Onsight Construction — a licensed general contractor with 15+ years in Colorado. When we look at your house, we know exactly what it needs because we've built and renovated hundreds of homes.</p>
                 <p style={{ margin: 0 }}>That means our offers are based on real numbers, not guesses. And it means we can often pay more than other buyers because we don't need to pad our margins for the unknown.</p>
               </div>
             </div>

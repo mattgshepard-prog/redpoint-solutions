@@ -20,7 +20,7 @@ export async function POST(request) {
     console.log("================");
 
     // TODO: Integrate with one or more of:
-    // 1. Resend email to matt@redpointsolutions.ai
+    // 1. Resend email to matt@redpointhomesolutions.com
     // 2. Google Sheets CRM via service account
     // 3. GoHighLevel webhook
     // 4. Gumloop automation trigger
@@ -31,12 +31,12 @@ export async function POST(request) {
       const resend = new Resend(process.env.RESEND_API_KEY);
 
       await resend.emails.send({
-        from: process.env.FROM_EMAIL || "leads@redpointsolutions.ai",
-        to: process.env.NOTIFICATION_EMAIL || "matt@redpointsolutions.ai",
+        from: process.env.FROM_EMAIL || "leads@redpointhomesolutions.com",
+        to: process.env.NOTIFICATION_EMAIL || "matt@redpointhomesolutions.com",
         subject: `🏠 New Lead: ${name} — ${situation || "General Inquiry"}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px;">
-            <h2 style="color: #C4956A;">New Lead from Redpoint Solutions</h2>
+            <h2 style="color: #C4956A;">New Lead from Redpoint Home Solutions</h2>
             <table style="width: 100%; border-collapse: collapse;">
               <tr><td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee;">Name</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${name}</td></tr>
               <tr><td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee;">Phone</td><td style="padding: 8px; border-bottom: 1px solid #eee;"><a href="tel:${phone}">${phone}</a></td></tr>
