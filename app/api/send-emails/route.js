@@ -12,8 +12,8 @@ export async function POST(request) {
     const { Resend } = await import("resend");
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    const fromEmail = process.env.FROM_EMAIL || "leads@redpointhomesolutions.com";
-    const notifyEmail = process.env.NOTIFICATION_EMAIL || "matt@redpointhomesolutions.com";
+    const fromEmail = process.env.FROM_EMAIL || "mattgshepard@gmail.com";
+    const notifyEmail = process.env.NOTIFICATION_EMAIL || "mattgshepard@gmail.com";
 
     const scorePercent = answers
       ? Math.round((answers.reduce((s, a) => s + a.weight, 0) / (answers.length * 4)) * 100)

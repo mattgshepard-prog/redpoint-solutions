@@ -48,8 +48,8 @@ export default function ContactPage() {
             <div style={{ background: "rgba(196,149,106,0.05)", borderRadius: 14, border: "1px solid rgba(196,149,106,0.1)", padding: "28px", textAlign: "center" }}>
               <div style={{ fontSize: "1.3rem", marginBottom: 8 }}>📧</div>
               <p style={{ fontSize: "0.85rem", color: "rgba(232,226,214,0.5)", margin: "0 0 6px" }}>Email us</p>
-              <a href="mailto:matt@redpointhomesolutions.com" style={{ fontFamily: "'Playfair Display', serif", fontSize: "1rem", fontWeight: 600, color: "var(--warm)", textDecoration: "none" }}>
-                matt@redpointhomesolutions.com
+              <a href="mailto:mattgshepard@gmail.com" style={{ fontFamily: "'Playfair Display', serif", fontSize: "1rem", fontWeight: 600, color: "var(--warm)", textDecoration: "none" }}>
+                mattgshepard@gmail.com
               </a>
               <p style={{ fontSize: "0.75rem", color: "rgba(232,226,214,0.4)", margin: "6px 0 0" }}>We respond within 24 hours</p>
             </div>

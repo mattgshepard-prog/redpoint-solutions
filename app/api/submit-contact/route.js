@@ -20,7 +20,7 @@ export async function POST(request) {
     console.log("================");
 
     // TODO: Integrate with one or more of:
-    // 1. Resend email to matt@redpointhomesolutions.com
+    // 1. Resend email to mattgshepard@gmail.com
     // 2. Google Sheets CRM via service account
     // 3. GoHighLevel webhook
     // 4. Gumloop automation trigger
@@ -31,8 +31,8 @@ export async function POST(request) {
       const resend = new Resend(process.env.RESEND_API_KEY);
 
       await resend.emails.send({
-        from: process.env.FROM_EMAIL || "leads@redpointhomesolutions.com",
-        to: process.env.NOTIFICATION_EMAIL || "matt@redpointhomesolutions.com",
+        from: process.env.FROM_EMAIL || "mattgshepard@gmail.com",
+        to: process.env.NOTIFICATION_EMAIL || "mattgshepard@gmail.com",
         subject: `🏠 New Lead: ${name} — ${situation || "General Inquiry"}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px;">
