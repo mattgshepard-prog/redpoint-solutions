@@ -32,6 +32,7 @@ export async function POST(request) {
 
       await resend.emails.send({
         from: process.env.FROM_EMAIL || "mattgshepard@gmail.com",
+        replyTo: email || process.env.NOTIFICATION_EMAIL || "mattgshepard@gmail.com",
         to: process.env.NOTIFICATION_EMAIL || "mattgshepard@gmail.com",
         subject: `🏠 New Lead: ${name} — ${situation || "General Inquiry"}`,
         html: `

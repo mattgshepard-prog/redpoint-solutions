@@ -48,6 +48,7 @@ export async function POST(request) {
       emailPromises.push(
         resend.emails.send({
           from: fromEmail,
+          replyTo: notifyEmail,
           to: contact.email,
           subject: `Your Property Situation Assessment — Redpoint Home Solutions`,
           html: `
@@ -94,6 +95,7 @@ export async function POST(request) {
     emailPromises.push(
       resend.emails.send({
         from: fromEmail,
+        replyTo: contact.email || notifyEmail,
         to: notifyEmail,
         subject: `🏠 Assessment Lead: ${contact.name} — ${results.urgencyLabel} (${scorePercent}%)`,
         html: `
