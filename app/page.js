@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
+import SiteFooter from "./components/SiteFooter";
 import FadeIn from "./components/FadeIn";
 import ContactForm from "./components/ContactForm";
 import SituationAssessment from "./components/SituationAssessment";
@@ -303,7 +303,7 @@ export default function HomePage() {
         </FadeIn>
       </section>
 
-      <Footer />
+      <SiteFooter />
     </>
   );
 }

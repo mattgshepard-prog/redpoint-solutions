@@ -1,6 +1,6 @@
 // @ts-nocheck
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+import SiteFooter from "../components/SiteFooter";
 import FadeIn from "../components/FadeIn";
 import ContactForm from "../components/ContactForm";
 import Link from "next/link";
@@ -57,7 +57,7 @@ export default function ContactPage() {
         </FadeIn>
       </section>
 
-      <Footer />
+      <SiteFooter />
     </>
   );
 }

@@ -2,7 +2,7 @@
 "use client";
 import Link from "next/link";
 import Nav from "./Nav";
-import Footer from "./Footer";
+import SiteFooter from "./SiteFooter";
 import FadeIn from "./FadeIn";
 import ContactForm from "./ContactForm";
 
@@ -107,7 +107,7 @@ export default function SituationLayout({ icon, title, subtitle, color, formSitu
         </div>
       </section>
 
-      <Footer />
+      <SiteFooter />
     </>
   );
 }

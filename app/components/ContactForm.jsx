@@ -21,7 +21,8 @@ export default function ContactForm({ preselectedSituation = "" }) {
   });
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    if (e && e.preventDefault) e.preventDefault();
     if (!formData.name || !formData.phone) {
       alert("Please enter your name and phone number.");
       return;
@@ -47,6 +48,8 @@ export default function ContactForm({ preselectedSituation = "" }) {
   if (status === "sent") {
     return (
       <div
+        role="status"
+        aria-live="polite"
         style={{
           background: "var(--card-bg)",
           borderRadius: 20,
@@ -55,7 +58,7 @@ export default function ContactForm({ preselectedSituation = "" }) {
           textAlign: "center",
         }}
       >
-        <div style={{ fontSize: "2.5rem", marginBottom: 16 }}>✓</div>
+        <div style={{ fontSize: "2.5rem", marginBottom: 16 }} aria-hidden="true">✓</div>
         <h3
           style={{
             fontFamily: "'Playfair Display', serif",
@@ -77,7 +80,10 @@ export default function ContactForm({ preselectedSituation = "" }) {
   }
 
   return (
-    <div
+    <form
+      onSubmit={handleSubmit}
+      noValidate
+      aria-label="Contact form"
       style={{
         background: "var(--card-bg)",
         borderRadius: 20,
@@ -87,67 +93,98 @@ export default function ContactForm({ preselectedSituation = "" }) {
     >
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
         <div>
-          <label style={labelStyle}>YOUR NAME *</label>
+          <label htmlFor="cf-name" style={labelStyle}>YOUR NAME *</label>
           <input
+            id="cf-name"
             type="text"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             placeholder="Full name"
             style={inputStyle}
+            required
+            aria-required="true"
+            autoComplete="name"
           />
         </div>
         <div>
-          <label style={labelStyle}>PHONE NUMBER *</label>
+          <label htmlFor="cf-phone" style={labelStyle}>PHONE NUMBER *</label>
           <input
+            id="cf-phone"
             type="tel"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             placeholder="(303) 555-0000"
             style={inputStyle}
+            required
+            aria-required="true"
+            aria-describedby="cf-phone-consent"
+            autoComplete="tel"
           />
         </div>
       </div>
 
+      <p
+        id="cf-phone-consent"
+        style={{
+          fontSize: "0.72rem",
+          color: "rgba(232,226,214,0.5)",
+          lineHeight: 1.65,
+          margin: "0 0 18px",
+        }}
+      >
+        By providing your phone, you consent to receive follow-up calls or text messages from Redpoint Home Solutions about your property and inquiry. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy-policy" style={{ color: "rgba(232,226,214,0.7)", textDecoration: "underline" }}>Privacy Policy</a>.
+      </p>
+
       <div style={{ marginBottom: 16 }}>
-        <label style={labelStyle}>EMAIL (OPTIONAL)</label>
+        <label htmlFor="cf-email" style={labelStyle}>EMAIL (OPTIONAL)</label>
         <input
+          id="cf-email"
           type="email"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           placeholder="you@email.com"
           style={inputStyle}
+          autoComplete="email"
         />
       </div>
 
       <div style={{ marginBottom: 16 }}>
-        <label style={labelStyle}>WHAT'S YOUR SITUATION?</label>
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          {SITUATIONS.map((opt) => (
-            <button
-              key={opt}
-              onClick={() => setFormData({ ...formData, situation: opt })}
-              style={{
-                padding: "10px 18px",
-                borderRadius: 8,
-                border: `1px solid ${formData.situation === opt ? "var(--warm)" : "rgba(232,226,214,0.12)"}`,
-                background: formData.situation === opt ? "rgba(196,149,106,0.1)" : "transparent",
-                color: formData.situation === opt ? "var(--warm)" : "rgba(232,226,214,0.6)",
-                fontSize: "0.88rem",
-                fontFamily: "'DM Sans', sans-serif",
-                cursor: "pointer",
-                fontWeight: formData.situation === opt ? 600 : 400,
-                transition: "all 0.2s ease",
-              }}
-            >
-              {opt}
-            </button>
-          ))}
-        </div>
+        <fieldset style={{ border: 0, padding: 0, margin: 0 }}>
+          <legend style={{ ...labelStyle, padding: 0 }}>WHAT'S YOUR SITUATION?</legend>
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+            {SITUATIONS.map((opt) => {
+              const selected = formData.situation === opt;
+              return (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => setFormData({ ...formData, situation: opt })}
+                  aria-pressed={selected}
+                  style={{
+                    padding: "10px 18px",
+                    borderRadius: 8,
+                    border: `1px solid ${selected ? "var(--warm)" : "rgba(232,226,214,0.12)"}`,
+                    background: selected ? "rgba(196,149,106,0.1)" : "transparent",
+                    color: selected ? "var(--warm)" : "rgba(232,226,214,0.6)",
+                    fontSize: "0.88rem",
+                    fontFamily: "'DM Sans', sans-serif",
+                    cursor: "pointer",
+                    fontWeight: selected ? 600 : 400,
+                    transition: "all 0.2s ease",
+                  }}
+                >
+                  {opt}
+                </button>
+              );
+            })}
+          </div>
+        </fieldset>
       </div>
 
       <div style={{ marginBottom: 24 }}>
-        <label style={labelStyle}>TELL US MORE (OPTIONAL)</label>
+        <label htmlFor="cf-message" style={labelStyle}>TELL US MORE (OPTIONAL)</label>
         <textarea
+          id="cf-message"
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           placeholder="Whatever you're comfortable sharing — property address, timeline, concerns..."
@@ -157,7 +194,7 @@ export default function ContactForm({ preselectedSituation = "" }) {
       </div>
 
       <button
-        onClick={handleSubmit}
+        type="submit"
         disabled={status === "sending"}
         style={{
           width: "100%",
@@ -178,7 +215,11 @@ export default function ContactForm({ preselectedSituation = "" }) {
       </button>
 
       {status === "error" && (
-        <p style={{ textAlign: "center", color: "#c45c5c", fontSize: "0.85rem", marginTop: 12 }}>
+        <p
+          role="alert"
+          aria-live="polite"
+          style={{ textAlign: "center", color: "#c45c5c", fontSize: "0.85rem", marginTop: 12 }}
+        >
           Something went wrong. Please try again or call us directly.
         </p>
       )}
@@ -186,7 +227,7 @@ export default function ContactForm({ preselectedSituation = "" }) {
       <p style={{ textAlign: "center", fontSize: "0.78rem", color: "rgba(232,226,214,0.35)", margin: "14px 0 0" }}>
         We'll respond within 24 hours. Your information is never shared or sold.
       </p>
-    </div>
+    </form>
   );
 }
 

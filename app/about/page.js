@@ -1,6 +1,6 @@
 // @ts-nocheck
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+import SiteFooter from "../components/SiteFooter";
 import FadeIn from "../components/FadeIn";
 import Link from "next/link";
 
@@ -106,7 +106,7 @@ export default function AboutPage() {
         </FadeIn>
       </section>
 
-      <Footer />
+      <SiteFooter />
     </>
   );
 }
