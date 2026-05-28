@@ -7,7 +7,7 @@ const SITE = {
   legalEntity: "Redpoint Consulting, LLC",
   displayName: "Redpoint Home Solutions",
   domain: "redpointhomesolutions.com",
-  email: "matt@shepardconsulting.ai",
+  email: "mattgshepard@gmail.com",
   address1: "1104 McIntosh Ave",
   cityStateZip: "Broomfield, CO 80020",
   phone: "(720) 738-7998",

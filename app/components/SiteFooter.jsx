@@ -19,7 +19,7 @@ const BRAND = {
   displayName: "Redpoint Home Solutions",
   address1: "1104 McIntosh Ave",
   cityStateZip: "Broomfield, CO 80020",
-  email: "matt@shepardconsulting.ai",
+  email: "mattgshepard@gmail.com",
   phone: "(720) 738-7998",
   phoneTelHref: "tel:+17207387998",
 };
