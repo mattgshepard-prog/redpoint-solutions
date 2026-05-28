@@ -297,7 +297,7 @@ export default function HomePage() {
         <FadeIn delay={0.2}>
           <div style={{ textAlign: "center", marginTop: 40, padding: "28px", background: "rgba(196,149,106,0.05)", borderRadius: 14, border: "1px solid rgba(196,149,106,0.1)" }}>
             <p style={{ fontSize: "0.92rem", color: "rgba(232,226,214,0.6)", margin: "0 0 8px" }}>Prefer to talk to someone right now?</p>
-            <a href="tel:+17207649112" style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.5rem", fontWeight: 600, color: "var(--warm)", textDecoration: "none" }}>(720) 764-9112</a>
+            <a href="tel:+17207387998" style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.5rem", fontWeight: 600, color: "var(--warm)", textDecoration: "none" }}>(720) 738-7998</a>
             <p style={{ fontSize: "0.78rem", color: "rgba(232,226,214,0.4)", margin: "8px 0 0" }}>Available 24/7 — talk to a real person, not a robot</p>
           </div>
         </FadeIn>

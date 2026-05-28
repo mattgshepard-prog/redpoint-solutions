@@ -165,7 +165,7 @@ export default function SituationAssessment() {
       }).catch(() => {});
     } catch (err) {
       console.error(err);
-      setErrorMsg("We had trouble generating your assessment. Please try again or call us directly at (720) 764-9112.");
+      setErrorMsg("We had trouble generating your assessment. Please try again or call us directly at (720) 738-7998.");
       setStep("error");
     }
   };
@@ -421,8 +421,8 @@ export default function SituationAssessment() {
           <button onClick={downloadPDF} style={primaryBtn}>
             Download PDF Report
           </button>
-          <a href="tel:+17207649112" style={{ ...secondaryBtn, textDecoration: "none", textAlign: "center", display: "block" }}>
-            Talk to Someone Now — (720) 764-9112
+          <a href="tel:+17207387998" style={{ ...secondaryBtn, textDecoration: "none", textAlign: "center", display: "block" }}>
+            Talk to Someone Now — (720) 738-7998
           </a>
         </div>
 
@@ -551,7 +551,7 @@ function buildPDFHTML(contact, results, answers) {
 
   <div class="footer">
     <p><strong>Redpoint Home Solutions</strong> &bull; A Redpoint Consulting Company</p>
-    <p>(720) 764-9112 &bull; redpointhomesolutions.com</p>
+    <p>(720) 738-7998 &bull; redpointhomesolutions.com</p>
     <p>Denver Metro, Colorado</p>
   </div>
 </body></html>`;

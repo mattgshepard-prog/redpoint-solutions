@@ -68,8 +68,8 @@ export default function ContactForm({ preselectedSituation = "" }) {
         </h3>
         <p style={{ color: "rgba(232,226,214,0.6)", fontSize: "0.95rem", lineHeight: 1.7, margin: 0 }}>
           Someone from our team will reach out within 24 hours. If you need help sooner, call us at{" "}
-          <a href="tel:+17207649112" style={{ color: "var(--warm)", textDecoration: "none", fontWeight: 600 }}>
-            (720) 764-9112
+          <a href="tel:+17207387998" style={{ color: "var(--warm)", textDecoration: "none", fontWeight: 600 }}>
+            (720) 738-7998
           </a>
         </p>
       </div>

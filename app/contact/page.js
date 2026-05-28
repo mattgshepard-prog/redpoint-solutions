@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Contact Redpoint Home Solutions | Get Help With Your Denver Property",
-  description: "Ready to talk about your situation? Fill out the form or call us. We respond within 24 hours — or talk to someone right now at (720) 764-9112.",
+  description: "Ready to talk about your situation? Fill out the form or call us. We respond within 24 hours — or talk to someone right now at (720) 738-7998.",
 };
 
 export default function ContactPage() {
@@ -40,8 +40,8 @@ export default function ContactPage() {
             <div style={{ background: "rgba(196,149,106,0.05)", borderRadius: 14, border: "1px solid rgba(196,149,106,0.1)", padding: "28px", textAlign: "center" }}>
               <div style={{ fontSize: "1.3rem", marginBottom: 8 }}>📞</div>
               <p style={{ fontSize: "0.85rem", color: "rgba(232,226,214,0.5)", margin: "0 0 6px" }}>Call us anytime</p>
-              <a href="tel:+17207649112" style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.2rem", fontWeight: 600, color: "var(--warm)", textDecoration: "none" }}>
-                (720) 764-9112
+              <a href="tel:+17207387998" style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.2rem", fontWeight: 600, color: "var(--warm)", textDecoration: "none" }}>
+                (720) 738-7998
               </a>
               <p style={{ fontSize: "0.75rem", color: "rgba(232,226,214,0.4)", margin: "6px 0 0" }}>Available 24/7</p>
             </div>

@@ -78,7 +78,7 @@ export async function POST(request) {
 
               <div style="margin-top:32px;padding:20px;background:#1A1814;border-radius:10px;text-align:center;">
                 <p style="color:#E8E2D6;margin:0 0 8px;font-size:0.95rem;">Ready to talk? We're here for you.</p>
-                <a href="tel:+17207649112" style="color:#C4956A;font-size:1.2rem;font-weight:600;text-decoration:none;">(720) 764-9112</a>
+                <a href="tel:+17207387998" style="color:#C4956A;font-size:1.2rem;font-weight:600;text-decoration:none;">(720) 738-7998</a>
                 <p style="color:rgba(232,226,214,0.5);margin:8px 0 0;font-size:0.8rem;">Available 24/7 — no pressure, just real answers</p>
               </div>
 

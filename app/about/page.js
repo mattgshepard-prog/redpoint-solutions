@@ -89,7 +89,7 @@ export default function AboutPage() {
               Get in Touch
             </Link>
             <a
-              href="tel:+17207649112"
+              href="tel:+17207387998"
               style={{
                 border: "1.5px solid rgba(196,149,106,0.35)",
                 color: "var(--cream)",
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 fontSize: "0.95rem",
               }}
             >
-              Call (720) 764-9112
+              Call (720) 738-7998
             </a>
           </div>
         </FadeIn>
