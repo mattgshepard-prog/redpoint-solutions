@@ -102,6 +102,7 @@ export default function SituationAssessment() {
   const [loadingMsg, setLoadingMsg] = useState(0);
   const [errorMsg, setErrorMsg] = useState("");
   const containerRef = useRef(null);
+  const isInitialMount = useRef(true);
 
   // Rotate loading messages
   useEffect(() => {
@@ -113,7 +114,12 @@ export default function SituationAssessment() {
   }, [step]);
 
   // Scroll to top of widget on step change
+  // Skip initial mount so the page doesn't auto-scroll to the widget on load
   useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
     if (containerRef.current) {
       containerRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
