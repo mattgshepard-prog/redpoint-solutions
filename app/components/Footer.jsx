@@ -51,7 +51,7 @@ export default function Footer() {
           A Redpoint Consulting company &bull; Denver Metro, Colorado
         </div>
         <div style={{ fontSize: "0.78rem", color: "rgba(232,226,214,0.35)" }}>
-          &copy; {new Date().getFullYear()} M G Enterprises LLC
+          &copy; {new Date().getFullYear()} Redpoint Consulting, LLC
         </div>
       </div>
     </footer>

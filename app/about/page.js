@@ -59,7 +59,7 @@ export default function AboutPage() {
 
             <h2>The team</h2>
             <p>
-              Redpoint Home Solutions is a division of Redpoint Consulting (M G Enterprises LLC), focused on helping homeowners in the Denver metro area navigate difficult property situations. We're backed by Onsight Construction LLC for renovation work and work with a network of trusted attorneys, title companies, and real estate professionals across Colorado.
+              Redpoint Home Solutions is the public-facing brand of Redpoint Consulting, LLC, a Colorado limited liability company focused on helping homeowners in the Denver metro area navigate difficult property situations. We're backed by Onsight Construction LLC for renovation work and work with a network of trusted attorneys, title companies, and real estate professionals across Colorado.
             </p>
             <p>
               When you call us, you talk to a real person who lives in your community and understands your local market — not a call center.
