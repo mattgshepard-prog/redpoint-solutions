@@ -89,15 +89,22 @@ export async function POST(request) {
       const supabase = createClient(owUrl, owKey, { auth: { persistSession: false } });
 
       // Upsert by lowercased email: look up existing → deep-merge → else insert.
-      const { data: existing, error: selErr } = await supabase
-        .from("contacts")
-        .select("id, enrichment_data, tags")
-        .eq("email", emailLower)
-        .maybeSingle();
-
-      if (selErr) {
-        console.error("[seller-lead] select error:", selErr.message);
-        return Response.json({ ok: false, error: "Lead store lookup failed" }, { status: 500 });
+      // A lookup failure is NON-FATAL (mirrors the verified Python adapter):
+      // we fall through to insert rather than dropping the lead on the floor.
+      let existing = null;
+      try {
+        const { data, error: selErr } = await supabase
+          .from("contacts")
+          .select("id, enrichment_data, tags")
+          .eq("email", emailLower)
+          .maybeSingle();
+        if (selErr) {
+          console.warn("[seller-lead] contact lookup failed (treating as new):", selErr.message);
+        } else {
+          existing = data;
+        }
+      } catch (e) {
+        console.warn("[seller-lead] contact lookup threw (treating as new):", e.message);
       }
 
       const baseTags = ["redpoint_seller", "chatgpt_ads"];
