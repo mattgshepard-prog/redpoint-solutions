@@ -56,6 +56,9 @@ function estimateTokens(messages) {
 }
 
 async function callAnthropic({ apiKey, model, system, messages, maxTokens, temperature }) {
+  // Opus 4.8 rejects the `temperature` parameter ("deprecated for this model").
+  // Only send temperature to models that accept it (Haiku / Sonnet).
+  const sendTemp = temperature != null && model !== MODELS.opus;
   const res = await fetch(ANTHROPIC_URL, {
     method: "POST",
     headers: {
@@ -66,7 +69,7 @@ async function callAnthropic({ apiKey, model, system, messages, maxTokens, tempe
     body: JSON.stringify({
       model,
       max_tokens: maxTokens,
-      ...(temperature != null ? { temperature } : {}),
+      ...(sendTemp ? { temperature } : {}),
       ...(system ? { system } : {}),
       messages,
     }),
