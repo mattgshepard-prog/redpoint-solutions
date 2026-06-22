@@ -35,6 +35,9 @@ export async function POST(request) {
       consentTimestamp = "",
       consentSource = "",
       campaignId = "chatgpt-ads-allTriggers",
+      gclid = "",                 // Google click id (for conversion attribution)
+      gbraid = "",                // iOS app->web click id
+      wbraid = "",                // iOS web click id
       enrichment = {},        // structured seller-intel blob (from analysis/structure)
       transcript = [],        // [{role, content}]
     } = body || {};
@@ -72,6 +75,11 @@ export async function POST(request) {
         text_shown: consentText,
         timestamp: consentTimestamp || nowIso,
         source: consentSource || "",
+      },
+      ad_attribution: {
+        gclid: gclid || null,
+        gbraid: gbraid || null,
+        wbraid: wbraid || null,
       },
       full_transcript: transcript,
       source: INTAKE_SOURCE,

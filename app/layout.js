@@ -1,4 +1,5 @@
 import './globals.css';
+import Script from 'next/script';
 
 export const metadata = {
   title: 'Redpoint Home Solutions | Sell Your Colorado Home Fast — Any Situation, Any Condition',
@@ -69,6 +70,13 @@ const ADA_GLOBAL_CSS = `
   }
 `;
 
+// Google Ads tag (gtag.js) — account-level measurement foundation.
+// Conversion events are fired programmatically from the seller funnel
+// (see SellFunnelClient.jsx) at the moment a lead write succeeds, not on
+// page load. Enhanced Conversions (hashed email/phone) are toggled on in
+// the Google Ads UI and use the same tag.
+const GADS_TAG_ID = 'AW-18231534549';
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -78,6 +86,21 @@ export default function RootLayout({ children }) {
         <style dangerouslySetInnerHTML={{ __html: ADA_GLOBAL_CSS }} />
       </head>
       <body>
+        {/* Google Ads global tag */}
+        <Script
+          id="gads-base"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GADS_TAG_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gads-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GADS_TAG_ID}');
+          `}
+        </Script>
+
         <a href="#main-content" className="skip-to-main">Skip to main content</a>
         {children}
       </body>

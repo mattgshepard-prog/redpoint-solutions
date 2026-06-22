@@ -29,6 +29,35 @@ const CONSENT_TEXT =
   "is not a condition of any purchase or service. Message and data rates may " +
   "apply. Reply STOP to opt out at any time.";
 
+// Google Ads conversion target for the "Submit lead form" action.
+const GADS_SEND_TO = "AW-18231534549/1tzlCIrc0sMcENXHvPVD";
+
+// Read a query param off the current URL (gclid / gbraid / wbraid).
+function getUrlParam(name) {
+  if (typeof window === "undefined") return "";
+  try {
+    return new URLSearchParams(window.location.search).get(name) || "";
+  } catch (_) {
+    return "";
+  }
+}
+
+// Fire the Google Ads conversion in-browser. Best-effort: Enhanced
+// Conversions (configured in the Google Ads UI) attaches hashed email/phone
+// from this same event to recover conversions lost to cookie/ITP limits.
+function fireGoogleConversion({ email, phone }) {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") return;
+  try {
+    window.gtag("set", "user_data", {
+      email: email || undefined,
+      phone_number: phone || undefined,
+    });
+    window.gtag("event", "conversion", { send_to: GADS_SEND_TO });
+  } catch (e) {
+    console.warn("gads conversion fire failed (non-fatal):", e && e.message);
+  }
+}
+
 export default function SellFunnelClient() {
   // Conversation state
   const [messages, setMessages] = useState([
@@ -46,6 +75,16 @@ export default function SellFunnelClient() {
   const [contactErrors, setContactErrors] = useState({});
   const [contactSubmitting, setContactSubmitting] = useState(false);
   const [contactStatusMsg, setContactStatusMsg] = useState("");
+
+  // Google click identifiers captured from the landing URL (for attribution).
+  const [clickIds, setClickIds] = useState({ gclid: "", gbraid: "", wbraid: "" });
+  useEffect(() => {
+    setClickIds({
+      gclid: getUrlParam("gclid"),
+      gbraid: getUrlParam("gbraid"),
+      wbraid: getUrlParam("wbraid"),
+    });
+  }, []);
 
   const scrollRef = useRef(null);
   const inputRef = useRef(null);
@@ -191,6 +230,9 @@ export default function SellFunnelClient() {
           consentTimestamp: nowIso,
           consentSource: typeof window !== "undefined" ? window.location.href : "",
           campaignId: "chatgpt-ads-allTriggers",
+          gclid: clickIds.gclid || "",
+          gbraid: clickIds.gbraid || "",
+          wbraid: clickIds.wbraid || "",
           enrichment,
           transcript: messages,
         }),
@@ -200,6 +242,10 @@ export default function SellFunnelClient() {
       // alert path and the transcript are best-effort; surface a soft note.
       console.error("lead write failed", e);
     }
+
+    // Fire the Google Ads conversion now that the lead is captured. Client-side
+    // event + Enhanced Conversions; non-blocking and never affects the UX.
+    fireGoogleConversion({ email: contact.email.trim(), phone: contact.phone.trim() });
 
     // 3) Show the analysis (the trust-earning payoff) in the chat and keep going.
     setContactDone(true);
