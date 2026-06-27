@@ -1,6 +1,6 @@
 // @ts-nocheck
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const SITUATIONS = [
   "Inherited Property",
@@ -11,6 +11,51 @@ const SITUATIONS = [
   "Other",
 ];
 
+// Capture attribution on the FIRST page the visitor lands on, stash it in
+// sessionStorage, then read it back at submit. This survives multi-page
+// visits, where document.referrer at submit time would just be our own domain.
+function captureAttribution() {
+  if (typeof window === "undefined") return;
+  try {
+    const KEY = "rp_attribution";
+    // Only capture once per session, on the genuine first touch.
+    if (sessionStorage.getItem(KEY)) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const get = (k) => params.get(k) || "";
+
+    const attribution = {
+      referrer: document.referrer || "",
+      landing_page: window.location.href || "",
+      utm_source: get("utm_source"),
+      utm_medium: get("utm_medium"),
+      utm_campaign: get("utm_campaign"),
+      utm_content: get("utm_content"),
+      utm_term: get("utm_term"),
+      gclid: get("gclid"),
+      fbclid: get("fbclid"),
+      gbraid: get("gbraid"),
+      wbraid: get("wbraid"),
+      msclkid: get("msclkid"),
+      captured_at: new Date().toISOString(),
+    };
+
+    sessionStorage.setItem(KEY, JSON.stringify(attribution));
+  } catch {
+    // sessionStorage can throw in private mode / blocked storage — fail silently.
+  }
+}
+
+function readAttribution() {
+  if (typeof window === "undefined") return {};
+  try {
+    const raw = sessionStorage.getItem("rp_attribution");
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
 export default function ContactForm({ preselectedSituation = "" }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -20,6 +65,11 @@ export default function ContactForm({ preselectedSituation = "" }) {
     message: "",
   });
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+
+  // Stash first-touch attribution as soon as the form mounts.
+  useEffect(() => {
+    captureAttribution();
+  }, []);
 
   const handleSubmit = async (e) => {
     if (e && e.preventDefault) e.preventDefault();
@@ -32,7 +82,7 @@ export default function ContactForm({ preselectedSituation = "" }) {
       const res = await fetch("/api/submit-contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, attribution: readAttribution() }),
       });
       if (res.ok) {
         setStatus("sent");
