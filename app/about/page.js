@@ -42,7 +42,7 @@ export default function AboutPage() {
               It means our offers are based on real numbers. We don't need to pad our margin to account for unknown repair costs because the costs aren't unknown to us. That translates directly into a fairer offer for you.
             </p>
             <p>
-              It also means we actually close. We don't tie up your property with a contract and then try to wholesale it to someone else. We buy the house, we renovate it with our own crew, and we either sell it or add it to our rental portfolio. What we tell you is what happens.
+              It also means we actually close. Most of the time we buy the house, renovate it with our own crew, and either sell it or add it to our rental portfolio. When we may instead assign our purchase contract to another buyer, we tell you in writing before you sign, and your price and terms stay the same. What we tell you is what happens.
             </p>
 
             <h2>Our approach</h2>

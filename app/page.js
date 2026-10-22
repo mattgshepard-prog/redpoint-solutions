@@ -55,10 +55,39 @@ export default function HomePage() {
 
       {/* HERO */}
       <section style={{ minHeight: "100vh", display: "flex", alignItems: "center", position: "relative", overflow: "hidden" }}>
+        {/* PRIVATE SALE STRIP: for owners who are not in a hard spot, e.g. someone who got our note and searched us */}
+        <div style={{ position: "absolute", top: 78, left: 0, right: 0, zIndex: 5, padding: "0 24px", pointerEvents: "none" }}>
+          <Link
+            href="/private-sale"
+            style={{
+              pointerEvents: "auto",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "4px 10px",
+              maxWidth: 1152,
+              margin: "0 auto",
+              padding: "11px 18px",
+              borderRadius: 10,
+              background: "rgba(196,149,106,0.08)",
+              border: "1px solid rgba(196,149,106,0.22)",
+              color: "var(--cream)",
+              textDecoration: "none",
+              fontSize: "0.9rem",
+              lineHeight: 1.5,
+              textAlign: "center",
+            }}
+          >
+            <span style={{ opacity: 0.85 }}>Not in a tough spot? If you&rsquo;re simply open to the right offer on your home,</span>
+            <span style={{ color: "var(--warm)", fontWeight: 600 }}>see how a private sale works &rarr;</span>
+          </Link>
+        </div>
+
         <div style={{ position: "absolute", top: "-20%", right: "-10%", width: "60vw", height: "60vw", background: "radial-gradient(circle, rgba(196,149,106,0.03) 0%, transparent 70%)", animation: "rp-glow 6s ease-in-out infinite", pointerEvents: "none" }} />
         <div style={{ position: "absolute", bottom: "-30%", left: "-15%", width: "50vw", height: "50vw", background: "radial-gradient(circle, rgba(74,124,111,0.03) 0%, transparent 70%)", animation: "rp-glow 8s ease-in-out infinite 2s", pointerEvents: "none" }} />
 
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "140px 24px 80px", width: "100%", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: "clamp(40px, 6vw, 80px)", alignItems: "center" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "170px 24px 80px", width: "100%", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: "clamp(40px, 6vw, 80px)", alignItems: "center" }}>
           <div>
             <div style={{ display: "inline-block", padding: "6px 14px", background: "rgba(196,149,106,0.1)", borderRadius: 20, fontSize: "0.78rem", fontWeight: 600, color: "var(--warm)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 28, border: "1px solid rgba(196,149,106,0.15)" }}>
               Denver Metro &bull; Colorado
