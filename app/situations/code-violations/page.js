@@ -11,13 +11,13 @@ export default function CodeViolationsPage() {
     <SituationLayout
       icon="🔧"
       title="Code violations or major repairs."
-      subtitle="Fines piling up, repair estimates through the roof, and traditional buyers won't touch it. We've been in your shoes — literally."
+      subtitle="Fines piling up, repair estimates through the roof, and traditional buyers won't touch it. We've been in your shoes, literally."
       color="#5B6B7B"
       formSituation="Code Violations"
     >
       <h2>This is where we're genuinely different</h2>
       <p>
-        Most cash home buyers see a house with code violations and start subtracting from their offer. They don't really know what the repairs cost — they guess high to protect their margin, and you get a lowball offer.
+        Most cash home buyers see a house with code violations and start subtracting from their offer. They don't really know what the repairs cost, they guess high to protect their margin, and you get a lowball offer.
       </p>
       <p>
         We're a licensed general contractor (Onsight Construction LLC) with 15+ years of renovation experience in Colorado. When we look at your house, we know exactly what it costs to fix because we've done it hundreds of times. That means our offers are based on real numbers, and we can often pay more than other buyers.
@@ -28,14 +28,14 @@ export default function CodeViolationsPage() {
         Code violations come in different flavors, and the severity matters:
       </p>
       <ul>
-        <li><strong>Health and safety violations:</strong> These are the most urgent — things like no working smoke detectors, exposed wiring, broken sewer lines, or structural issues. Municipalities can condemn a property for these.</li>
+        <li><strong>Health and safety violations:</strong> These are the most urgent: things like no working smoke detectors, exposed wiring, broken sewer lines, or structural issues. Municipalities can condemn a property for these.</li>
         <li><strong>Building code violations:</strong> Unpermitted work (additions, basements, electrical), non-compliant installations, or renovations that don't meet current code. Common when DIY work was done without permits.</li>
         <li><strong>Zoning violations:</strong> Illegal units, commercial use in residential zones, or structures built too close to property lines.</li>
         <li><strong>Property maintenance violations:</strong> Overgrown vegetation, junk vehicles, exterior deterioration. These are usually the easiest to fix but come with escalating fines.</li>
       </ul>
 
       <div className="callout">
-        <p><strong>Important:</strong> Code violations don't go away when a property sells. They transfer to the new owner. That's why traditional buyers avoid these properties — and why you need a buyer who actually knows how to handle them. That's us.</p>
+        <p><strong>Important:</strong> Code violations don't go away when a property sells. They transfer to the new owner. That's why traditional buyers avoid these properties, and why you need a buyer who actually knows how to handle them. That's us.</p>
       </div>
 
       <h2>The fine situation</h2>
@@ -50,7 +50,7 @@ export default function CodeViolationsPage() {
 
       <h3>Option 1: Fix it yourself</h3>
       <p>
-        If you have the funds and time, bringing the property into compliance yourself is always an option. Get permits for any unpermitted work, hire licensed contractors for electrical and plumbing, and work with your local building department. Costs vary wildly — from $5,000 for minor issues to $150,000+ for major structural or systems work.
+        If you have the funds and time, bringing the property into compliance yourself is always an option. Get permits for any unpermitted work, hire licensed contractors for electrical and plumbing, and work with your local building department. Costs vary wildly, from $5,000 for minor issues to $150,000+ for major structural or systems work.
       </p>
 
       <h3>Option 2: List it "as-is" with a realtor</h3>
@@ -64,7 +64,7 @@ export default function CodeViolationsPage() {
       </p>
       <ul>
         <li>We assess the property with contractor eyes, not investor eyes. We know the difference between a $3,000 fix and a $30,000 fix.</li>
-        <li>We handle all municipality coordination — violation responses, permit applications, inspection scheduling.</li>
+        <li>We handle all municipality coordination: violation responses, permit applications, inspection scheduling.</li>
         <li>We often negotiate fine reductions on your behalf as part of the sale.</li>
         <li>We close fast, stopping the fine clock.</li>
       </ul>
@@ -80,7 +80,7 @@ export default function CodeViolationsPage() {
 
       <h2>What we need from you</h2>
       <p>
-        Honestly? Not much. If you have copies of the violation notices, that helps us move faster. If not, we'll pull them from the city ourselves. We just need access to the property for a walkthrough — about 30 minutes — and we'll have an offer for you within 24 hours.
+        Honestly? Not much. If you have copies of the violation notices, that helps us move faster. If not, we'll pull them from the city ourselves. We just need access to the property for a walkthrough (about 30 minutes), and we'll have an offer for you within 24 hours.
       </p>
     </SituationLayout>
   );

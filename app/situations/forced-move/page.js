@@ -3,7 +3,7 @@ import SituationLayout from "../../components/SituationLayout";
 
 export const metadata = {
   title: "Need to Sell Your Colorado Home Fast? Job Relocation & Life Changes | Redpoint Home Solutions",
-  description: "Job transfer, family emergency, or major life change? When you need to sell your Denver metro home fast, we close on your timeline — as quickly as 7 days.",
+  description: "Job transfer, family emergency, or major life change? When you need to sell your Denver metro home fast, we close on your timeline, as quickly as 7 days.",
 };
 
 export default function ForcedMovePage() {
@@ -11,7 +11,7 @@ export default function ForcedMovePage() {
     <SituationLayout
       icon="✈️"
       title="You need to move fast."
-      subtitle="Life doesn't wait for a 90-day listing. Whether it's a job transfer, a family emergency, or a fresh start — we close on your timeline."
+      subtitle="Life doesn't wait for a 90-day listing. Whether it's a job transfer, a family emergency, or a fresh start, we close on your timeline."
       color="#5B7B6B"
       formSituation="Need to Move Fast"
     >
@@ -20,7 +20,7 @@ export default function ForcedMovePage() {
         Your employer says "be in Dallas in 30 days." Your mom in Florida needs full-time care starting next month. Your military orders just came through. Whatever the reason, you need to sell your house and you don't have 90 days to play the traditional listing game.
       </p>
       <p>
-        This isn't a distress sale — it's a time-constrained one. You might have a perfectly fine house in a great market. The problem isn't the property. The problem is the calendar.
+        This isn't a distress sale, it's a time-constrained one. You might have a perfectly fine house in a great market. The problem isn't the property. The problem is the calendar.
       </p>
 
       <h2>Why traditional sales don't work here</h2>
@@ -30,7 +30,7 @@ export default function ForcedMovePage() {
       <ul>
         <li><strong>1-2 weeks:</strong> Prep, staging, photography, listing setup</li>
         <li><strong>2-4 weeks:</strong> Showings, open houses, offers</li>
-        <li><strong>2-4 weeks:</strong> Under contract — inspections, appraisal, buyer financing</li>
+        <li><strong>2-4 weeks:</strong> Under contract: inspections, appraisal, buyer financing</li>
         <li><strong>1-2 weeks:</strong> Closing coordination</li>
       </ul>
       <p>
@@ -57,7 +57,7 @@ export default function ForcedMovePage() {
         Let's be honest about the tradeoff. A cash sale on a compressed timeline will typically net you less than a full-market listing with maximum exposure time. That's true for any cash buyer, including us.
       </p>
       <p>
-        But here's where we're different: because we're licensed contractors, we're not guessing at repair costs or padding our numbers with excessive contingencies. Our offers tend to be 85-92% of market value depending on the property's condition — which is significantly higher than most cash offer companies.
+        But here's where we're different: because we're licensed contractors, we're not guessing at repair costs or padding our numbers with excessive contingencies. We make fair offers based on actual repair costs and current market value, and we'll show you exactly how we arrived at our number.
       </p>
       <p>
         And consider the hidden costs of a traditional sale: 5-6% realtor commissions, buyer repair credits, carrying costs while the house sits on market, and the stress of managing showings while packing your life into boxes.
@@ -67,7 +67,7 @@ export default function ForcedMovePage() {
 
       <h3>Job relocations</h3>
       <p>
-        Corporate transfers with 30-60 day timelines. Sometimes your employer covers closing costs or offers a relocation package — we can work with your relo company directly if needed. We've coordinated with major relocation firms before.
+        Corporate transfers with 30-60 day timelines. Sometimes your employer covers closing costs or offers a relocation package, we can work with your relo company directly if needed. We've coordinated with major relocation firms before.
       </p>
 
       <h3>Military PCS orders</h3>
@@ -95,7 +95,7 @@ export default function ForcedMovePage() {
 
       <h2>One call, one conversation</h2>
       <p>
-        We know you're busy. One phone call or form submission and we'll get you an offer, usually within 24 hours. If the numbers work for you, we move immediately. If they don't, no hard feelings — we'll even help you think through your other options.
+        We know you're busy. One phone call or form submission and we'll get you an offer, usually within 24 hours. If the numbers work for you, we move immediately. If they don't, no hard feelings: we'll even help you think through your other options.
       </p>
     </SituationLayout>
   );

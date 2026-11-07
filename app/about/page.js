@@ -28,13 +28,13 @@ export default function AboutPage() {
         <FadeIn delay={0.1}>
           <div className="situation-content">
             <p>
-              Redpoint Home Solutions exists because we saw an industry full of people who don't understand what they're buying. Most "we buy houses" companies are marketing operations — they generate leads, make lowball offers using rough estimates, and either flip the contract to another investor or overpay for repairs because they don't know what they're doing.
+              Redpoint Home Solutions exists because we saw an industry full of people who don't understand what they're buying. We make fair offers based on actual repair costs and current market value, and we'll show you exactly how we arrived at our number.
             </p>
             <p>
               We come from the other side. Onsight Construction LLC has been building and renovating homes in Colorado since 2021, but our team's experience goes back 15+ years. We've gut-renovated Victorians in Boulder, converted basements in Broomfield, and rebuilt fire-damaged structures in the mountains.
             </p>
             <p>
-              That construction DNA is what makes our offers different. When we walk through your house, we don't see problems — we see a scope of work. We know the difference between a $3,000 drywall repair and a $30,000 foundation issue. We know which subcontractors to call and what materials cost this month, not last year.
+              That construction DNA is what makes our offers different. When we walk through your house, we don't see problems, we see a scope of work. We know the difference between a $3,000 drywall repair and a $30,000 foundation issue. We know which subcontractors to call and what materials cost this month, not last year.
             </p>
 
             <h2>What that means for you</h2>
@@ -47,7 +47,7 @@ export default function AboutPage() {
 
             <h2>Our approach</h2>
             <p>
-              We built this website because we believe people in difficult situations deserve real information, not a sales pitch. Every guide on this site was written to help you understand your options — including options that don't involve selling to us.
+              We built this website because we believe people in difficult situations deserve real information, not a sales pitch. Every guide on this site was written to help you understand your options, including options that don't involve selling to us.
             </p>
             <p>
               If listing with a realtor is your best move, we'll tell you. If paying off a tax lien makes more sense than selling, we'll walk you through that. Our reputation matters more than any single deal, and treating people right is how we've built a business that lasts.
@@ -62,7 +62,7 @@ export default function AboutPage() {
               Redpoint Home Solutions is the public-facing brand of Redpoint Consulting, LLC, a Colorado limited liability company focused on helping homeowners in the Denver metro area navigate difficult property situations. We're backed by Onsight Construction LLC for renovation work and work with a network of trusted attorneys, title companies, and real estate professionals across Colorado.
             </p>
             <p>
-              When you call us, you talk to a real person who lives in your community and understands your local market — not a call center.
+              When you call us, you talk to a real person who lives in your community and understands your local market, not a call center.
             </p>
 
             <h2>Ready to talk?</h2>

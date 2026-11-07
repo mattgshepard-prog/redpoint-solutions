@@ -15,9 +15,9 @@ export default function DivorcePage() {
       color="#6B5B7B"
       formSituation="Divorce"
     >
-      <h2>We get it — this is personal</h2>
+      <h2>We get it, this is personal</h2>
       <p>
-        Divorce is one of the most stressful things a person can go through. And the house — often your biggest shared asset — sits right in the middle of it. Emotions run high, timelines are tight, and every decision feels loaded.
+        Divorce is one of the most stressful things a person can go through. And the house, often your biggest shared asset, sits right in the middle of it. Emotions run high, timelines are tight, and every decision feels loaded.
       </p>
       <p>
         We've helped dozens of couples navigate this. We work with both parties, both attorneys if needed, and our goal is simple: make the house the easiest part of a hard process.
@@ -25,7 +25,7 @@ export default function DivorcePage() {
 
       <h2>How Colorado handles property in divorce</h2>
       <p>
-        Colorado is an "equitable distribution" state, which means marital property is divided fairly — but not necessarily 50/50. Here's what matters for the house:
+        Colorado is an "equitable distribution" state, which means marital property is divided fairly, but not necessarily 50/50. Here's what matters for the house:
       </p>
       <ul>
         <li><strong>Marital vs. separate property:</strong> If the house was purchased during the marriage, it's generally marital property regardless of whose name is on the deed. If one spouse owned it before marriage, it may be partially or fully separate property.</li>
@@ -37,7 +37,7 @@ export default function DivorcePage() {
 
       <h3>Option 1: One spouse buys out the other</h3>
       <p>
-        If one person wants to keep the house, they can refinance in their name only and pay the other spouse their share of equity. This requires qualifying for the new mortgage solo — which isn't always possible.
+        If one person wants to keep the house, they can refinance in their name only and pay the other spouse their share of equity. This requires qualifying for the new mortgage solo, which isn't always possible.
       </p>
 
       <h3>Option 2: List it traditionally</h3>
@@ -59,7 +59,7 @@ export default function DivorcePage() {
 
       <h2>How we work with both parties</h2>
       <ul>
-        <li><strong>Separate communication:</strong> We can communicate with each party independently if that's easier. We're neutral — we work for the transaction, not for either side.</li>
+        <li><strong>Separate communication:</strong> We can communicate with each party independently if that's easier. We're neutral: we work for the transaction, not for either side.</li>
         <li><strong>Attorney coordination:</strong> We work directly with both attorneys to ensure the sale complies with your settlement terms.</li>
         <li><strong>Transparent pricing:</strong> Both parties see the same offer with the same breakdown. No side deals, no hidden terms.</li>
         <li><strong>Flexible closing:</strong> Need to close before a court deadline? We can move fast. Need more time to find your next place? We'll wait.</li>
