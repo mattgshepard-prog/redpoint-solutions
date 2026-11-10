@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Contact Redpoint Home Solutions | Get Help With Your Denver Property",
-  description: "Ready to talk about your situation? Fill out the form or call us. We respond within 24 hours — or talk to someone right now at (720) 738-7998.",
+  description: "Ready to talk about your situation? Fill out the form or call us. We respond within 24 hours, or talk to someone right now at (720) 738-7998.",
 };
 
 export default function ContactPage() {
@@ -25,7 +25,7 @@ export default function ContactPage() {
             <span style={{ color: "var(--warm)", fontStyle: "italic" }}>your situation.</span>
           </h1>
           <p style={{ fontSize: "1.05rem", lineHeight: 1.7, color: "rgba(232,226,214,0.65)", fontWeight: 300, maxWidth: 550, margin: "0 0 48px" }}>
-            Fill out the form below and we'll reach out within 24 hours. Or if you'd rather talk right now — call us.
+            Fill out the form below and we'll reach out within 24 hours. Or if you'd rather talk right now, call us.
           </p>
         </FadeIn>
       </section>

@@ -8,16 +8,16 @@ import SiteFooter from "../components/SiteFooter";
 import SellFunnelClient from "./SellFunnelClient";
 
 export const metadata = {
-  title: "Sell Your House — Any Situation | Redpoint Home Solutions",
+  title: "Sell Your House: Any Situation | Redpoint Home Solutions",
   description:
-    "Inherited a house, facing foreclosure, going through a divorce, or stuck with a property you can't fix? Talk through your real options — including ones that don't involve selling to us. No pressure, no obligation, no fees.",
+    "Inherited a house, facing foreclosure, going through a divorce, or stuck with a property you can't fix? Talk through your real options, including ones that don't involve selling to us. No pressure, no obligation, no fees.",
   keywords:
     "sell house fast Denver, sell inherited house Colorado, foreclosure help Denver, divorce house sale Colorado, cash home buyer Denver, sell house as-is Denver, we buy houses Denver",
   alternates: { canonical: "https://redpointhomesolutions.com/sell" },
   openGraph: {
-    title: "Talk Through Your Options — Redpoint Home Solutions",
+    title: "Talk Through Your Options: Redpoint Home Solutions",
     description:
-      "A calm, no-pressure way to think through what to do with a property. Get an honest read on your real options — even the ones that don't involve selling to us.",
+      "A calm, no-pressure way to think through what to do with a property. Get an honest read on your real options, even the ones that don't involve selling to us.",
     url: "https://redpointhomesolutions.com/sell",
     type: "website",
     locale: "en_US",
@@ -80,7 +80,7 @@ export default function SellPage() {
                 >
                   Inherited a place you don't know what to do with. Behind on payments. Going
                   through a divorce. A house that needs more work than you can put into it.
-                  Whatever it is — talk it through with us and get an honest read on your real
+                  Whatever it is, talk it through with us and get an honest read on your real
                   options. Sometimes that's a cash sale. Sometimes it's something else entirely,
                   and we'll tell you when it is.
                 </p>
@@ -95,7 +95,7 @@ export default function SellPage() {
                   }}
                 >
                   {[
-                    "We lay out every option — list, keep, rent, sell, or get help — not just the one that's good for us.",
+                    "We lay out every option (list, keep, rent, sell, or get help), not just the one that's good for us.",
                     "No dollar figures or pressure from a bot. A real person follows up only if you want them to.",
                     "Built for tough situations: probate, liens, code violations, tired rentals, hard timelines.",
                   ].map((t, i) => (

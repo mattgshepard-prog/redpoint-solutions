@@ -9,10 +9,10 @@ import ContactForm from "./components/ContactForm";
 import SituationAssessment from "./components/SituationAssessment";
 
 const SITUATIONS = [
-  { icon: "🏠", title: "Inherited a Property", slug: "inherited-property", subtitle: "Probate, shared ownership, out-of-state headaches", description: "You didn't ask for this. Maybe the house needs work, maybe there's a mortgage, maybe other family members are involved. We'll help you understand every option — not just the ones that benefit us.", color: "#4A7C6F", stats: "Average timeline: 2-6 weeks" },
+  { icon: "🏠", title: "Inherited a Property", slug: "inherited-property", subtitle: "Probate, shared ownership, out-of-state headaches", description: "You didn't ask for this. Maybe the house needs work, maybe there's a mortgage, maybe other family members are involved. We'll help you understand every option, not just the ones that benefit us.", color: "#4A7C6F", stats: "Average timeline: 2-6 weeks" },
   { icon: "⚖️", title: "Going Through Divorce", slug: "divorce", subtitle: "Need to divide assets or sell fast", description: "When you need to move forward, the house can feel like an anchor. We help both parties reach a fair resolution quickly, with zero drama and complete discretion.", color: "#6B5B7B", stats: "Average timeline: 1-3 weeks" },
   { icon: "📋", title: "Tax Liens or Back Taxes", slug: "tax-liens", subtitle: "Facing penalties, auctions, or mounting debt", description: "Tax problems compound fast. Before the county takes action, you have options. We'll walk you through what's possible and help you keep as much equity as you can.", color: "#7B5B5B", stats: "Average timeline: 2-4 weeks" },
-  { icon: "🔧", title: "Code Violations or Major Repairs", slug: "code-violations", subtitle: "Can't afford to fix it, can't sell it as-is", description: "Fines piling up. Contractors want $80K. Traditional buyers won't touch it. We buy houses in any condition — we're a licensed general contractor, so we actually know what the repairs cost.", color: "#5B6B7B", stats: "We handle ALL repairs" },
+  { icon: "🔧", title: "Code Violations or Major Repairs", slug: "code-violations", subtitle: "Can't afford to fix it, can't sell it as-is", description: "Fines piling up. Contractors want $80K. Traditional buyers won't touch it. We buy houses in any condition: we're a licensed general contractor, so we actually know what the repairs cost.", color: "#5B6B7B", stats: "We handle ALL repairs" },
   { icon: "✈️", title: "Need to Move Fast", slug: "forced-move", subtitle: "Job relocation, family emergency, life change", description: "Your job says 'be in Dallas in 30 days.' Your mom needs you across the country. Life doesn't wait for a 90-day listing. We close on your timeline so you can focus on what actually matters.", color: "#5B7B6B", stats: "Close in as little as 7 days" },
 ];
 
@@ -25,7 +25,7 @@ const TESTIMONIALS = [
 
 const FAQ = [
   { q: "Do I have to pay anything?", a: "No. There are zero fees, zero commissions, and zero closing costs on your end. We cover everything." },
-  { q: "What condition does my house need to be in?", a: "Any condition. We're a licensed general contractor — we've seen it all and we buy it all. Mold, fire damage, foundation issues, hoarding situations — nothing scares us off." },
+  { q: "What condition does my house need to be in?", a: "Any condition. We're a licensed general contractor, we've seen it all and we buy it all. Mold, fire damage, foundation issues, hoarding situations, nothing scares us off." },
   { q: "How fast can you close?", a: "As fast as 7 days if you need to move quickly, or on your timeline if you need more time. You pick the closing date." },
   { q: "Is this a lowball cash offer company?", a: "No. We make fair offers based on actual repair costs (we're contractors, remember) and current market value. We'll show you exactly how we arrived at our number." },
   { q: "What if I just want information and I'm not ready to sell?", a: "That's exactly what this site is for. Browse our guides, use the situation assessment, or call us just to talk through your options. Zero pressure, ever." },
@@ -97,7 +97,7 @@ export default function HomePage() {
               <span style={{ color: "var(--warm)", fontStyle: "italic" }}>Let's solve it together.</span>
             </h1>
             <p style={{ fontSize: "1.12rem", lineHeight: 1.75, color: "rgba(232,226,214,0.72)", maxWidth: 520, margin: "0 0 36px", fontWeight: 300 }}>
-              Whether you inherited a property, are going through a divorce, owe back taxes, or are staring down expensive repairs — you have options. We'll help you understand every single one.
+              Whether you inherited a property, are going through a divorce, owe back taxes, or are staring down expensive repairs, you have options. We'll help you understand every single one.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <a href="#situations" style={{ background: "linear-gradient(135deg, var(--warm), var(--warm-dark))", color: "var(--bg)", padding: "14px 30px", borderRadius: 10, textDecoration: "none", fontWeight: 600, fontSize: "0.95rem", letterSpacing: "0.02em", display: "inline-block" }}>
@@ -109,7 +109,7 @@ export default function HomePage() {
             </div>
 
             <div style={{ display: "flex", gap: 40, marginTop: 52, paddingTop: 32, borderTop: "1px solid rgba(232,226,214,0.08)" }}>
-              {[["Zero Fees", "No commissions or closing costs"], ["Any Condition", "Licensed GC — we've seen it all"], ["Your Timeline", "Close in 7 days or 3 months"]].map(([label, sub]) => (
+              {[["Zero Fees", "No commissions or closing costs"], ["Any Condition", "Licensed GC, we've seen it all"], ["Your Timeline", "Close in 7 days or 3 months"]].map(([label, sub]) => (
                 <div key={label}>
                   <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--warm)", marginBottom: 4 }}>{label}</div>
                   <div style={{ fontSize: "0.78rem", color: "rgba(232,226,214,0.5)", fontWeight: 400 }}>{sub}</div>
@@ -164,7 +164,7 @@ export default function HomePage() {
               <span style={{ color: "var(--warm)", fontStyle: "italic" }}>Here's what yours looks like.</span>
             </h2>
             <p style={{ fontSize: "1.05rem", color: "rgba(232,226,214,0.6)", maxWidth: 580, margin: "0 auto", lineHeight: 1.7, fontWeight: 300 }}>
-              Click into your situation below. We'll explain what's going on, what your real options are, and how we can help — with zero pressure and zero obligation.
+              Click into your situation below. We'll explain what's going on, what your real options are, and how we can help, with zero pressure and zero obligation.
             </p>
           </div>
         </FadeIn>
@@ -215,15 +215,15 @@ export default function HomePage() {
                 We're not flippers.<br /><span style={{ color: "var(--warm)", fontStyle: "italic" }}>We're builders.</span>
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: 16, fontSize: "0.95rem", lineHeight: 1.75, color: "rgba(232,226,214,0.7)", fontWeight: 300 }}>
-                <p style={{ margin: 0 }}>Most "we buy houses" companies have never swung a hammer. They guess at repair costs, lowball you, then flip the contract to someone else. We're different.</p>
-                <p style={{ margin: 0 }}>Redpoint Home Solutions is backed by Onsight Construction — a licensed general contractor with 15+ years in Colorado. When we look at your house, we know exactly what it needs because we've built and renovated hundreds of homes.</p>
+                <p style={{ margin: 0 }}>We make fair offers based on actual repair costs and current market value, and we'll show you exactly how we arrived at our number.</p>
+                <p style={{ margin: 0 }}>Redpoint Home Solutions is backed by Onsight Construction, a licensed general contractor with 15+ years in Colorado. When we look at your house, we know exactly what it needs because we've built and renovated hundreds of homes.</p>
                 <p style={{ margin: 0 }}>That means our offers are based on real numbers, not guesses. And it means we can often pay more than other buyers because we don't need to pad our margins for the unknown.</p>
               </div>
             </div>
           </FadeIn>
           <FadeIn delay={0.15}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-              {[{ num: "15+", label: "Years in Colorado Construction", icon: "🏗️" }, { num: "500+", label: "Homes Renovated or Built", icon: "🏠" }, { num: "$0", label: "Fees to You — Ever", icon: "💰" }, { num: "24hr", label: "Offer Turnaround", icon: "⚡" }].map((stat) => (
+              {[{ num: "15+", label: "Years in Colorado Construction", icon: "🏗️" }, { num: "500+", label: "Homes Renovated or Built", icon: "🏠" }, { num: "$0", label: "Fees to You, Ever", icon: "💰" }, { num: "24hr", label: "Offer Turnaround", icon: "⚡" }].map((stat) => (
                 <div key={stat.label} style={{ background: "var(--card-bg)", borderRadius: 14, padding: "28px 22px", border: "1px solid rgba(232,226,214,0.06)", textAlign: "center" }}>
                   <div style={{ fontSize: "1.6rem", marginBottom: 10 }}>{stat.icon}</div>
                   <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8rem", fontWeight: 700, color: "var(--warm)", marginBottom: 6 }}>{stat.num}</div>
@@ -271,10 +271,10 @@ export default function HomePage() {
                 <span style={{ color: "var(--warm)", fontStyle: "italic" }}>Let us analyze your situation.</span>
               </h2>
               <p style={{ fontSize: "0.95rem", lineHeight: 1.75, color: "rgba(232,226,214,0.65)", fontWeight: 300, marginBottom: 24 }}>
-                Answer 8 quick questions about your property and circumstances. Our AI analyzes your specific situation against Colorado law, Denver metro market conditions, and our 15+ years of experience — then gives you a personalized breakdown of your options, timeline, and recommended next steps.
+                Answer 8 quick questions about your property and circumstances. Our AI analyzes your specific situation against Colorado law, Denver metro market conditions, and our 15+ years of experience, then gives you a personalized breakdown of your options, timeline, and recommended next steps.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                {[["Personalized to you", "Not a generic quiz — the AI considers your specific answers together"], ["Colorado-specific", "Probate timelines, tax lien rules, and market data specific to your area"], ["Honest options", "We'll tell you if listing with a realtor is your best move"], ["Instant results", "Get your assessment in under 2 minutes with a downloadable PDF"]].map(([title, desc]) => (
+                {[["Personalized to you", "Not a generic quiz: the AI considers your specific answers together"], ["Colorado-specific", "Probate timelines, tax lien rules, and market data specific to your area"], ["Honest options", "We'll tell you if listing with a realtor is your best move"], ["Instant results", "Get your assessment in under 2 minutes with a downloadable PDF"]].map(([title, desc]) => (
                   <div key={title} style={{ display: "flex", gap: 12 }}>
                     <div style={{ width: 6, minWidth: 6, borderRadius: 3, background: "var(--warm)", opacity: 0.4, marginTop: 4, height: 36 }} />
                     <div>
@@ -316,7 +316,7 @@ export default function HomePage() {
               Ready to talk? <span style={{ color: "var(--warm)", fontStyle: "italic" }}>No pressure.</span>
             </h2>
             <p style={{ fontSize: "1rem", color: "rgba(232,226,214,0.6)", maxWidth: 480, margin: "0 auto", lineHeight: 1.7, fontWeight: 300 }}>
-              Tell us a little about your situation. We'll reach out within 24 hours with some options — or call us right now.
+              Tell us a little about your situation. We'll reach out within 24 hours with some options, or call us right now.
             </p>
           </div>
         </FadeIn>
@@ -327,7 +327,7 @@ export default function HomePage() {
           <div style={{ textAlign: "center", marginTop: 40, padding: "28px", background: "rgba(196,149,106,0.05)", borderRadius: 14, border: "1px solid rgba(196,149,106,0.1)" }}>
             <p style={{ fontSize: "0.92rem", color: "rgba(232,226,214,0.6)", margin: "0 0 8px" }}>Prefer to talk to someone right now?</p>
             <a href="tel:+17207387998" style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.5rem", fontWeight: 600, color: "var(--warm)", textDecoration: "none" }}>(720) 738-7998</a>
-            <p style={{ fontSize: "0.78rem", color: "rgba(232,226,214,0.4)", margin: "8px 0 0" }}>Available 24/7 — talk to a real person, not a robot</p>
+            <p style={{ fontSize: "0.78rem", color: "rgba(232,226,214,0.4)", margin: "8px 0 0" }}>Available 24/7, talk to a real person, not a robot</p>
           </div>
         </FadeIn>
       </section>
