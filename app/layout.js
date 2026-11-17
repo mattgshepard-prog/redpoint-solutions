@@ -2,7 +2,7 @@ import './globals.css';
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Redpoint Home Solutions | Sell Your Colorado Home Fast — Any Situation, Any Condition',
+  title: 'Redpoint Home Solutions | Sell Your Colorado Home Fast: Any Situation, Any Condition',
   description: 'Inherited a house? Going through divorce? Facing tax liens or code violations? Need to move fast? We help Denver metro homeowners understand their options and sell on their timeline. Zero fees, zero pressure.',
   keywords: 'sell house fast Denver, inherited house Colorado, sell house divorce Denver, tax lien help Colorado, code violations Denver, cash home buyer Denver, we buy houses Denver',
   openGraph: {
