@@ -6,7 +6,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "About Redpoint Home Solutions | Licensed Contractor + Real Estate Investor",
-  description: "We're not just another 'we buy houses' company. We're licensed contractors with 15+ years in Colorado, which means fairer offers based on real repair costs.",
+  description: "We're licensed contractors with 15+ years in Colorado. We make offers based on actual repair costs and current market value, and we'll show you exactly how we arrived at our number.",
+  alternates: { canonical: "https://redpointhomesolutions.com/about" },
 };
 
 export default function AboutPage() {
